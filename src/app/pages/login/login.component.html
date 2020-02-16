@@ -1,0 +1,21 @@
+<div class='mt-15' fxLayoutAlign="center center">
+    <mat-card class="w-50">
+        <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+            <mat-card-title>Login</mat-card-title>
+            <!-- <mat-card-subtitle>subtitle</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]='loginForm' fxLayout="column" fxLayoutAlign="center center">
+                <mat-form-field>
+                    <input matInput formControlName='usuario' placeholder="Usuário" type="text">
+                </mat-form-field> 
+                <mat-form-field> 
+                    <input matInput formControlName='senha' placeholder="Senha" type="password">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class='mb-15' fxLayout="column" fxLayoutAlign="center center">
+            <button (click)="enviarDados()" class="success" mat-button>Entrar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
