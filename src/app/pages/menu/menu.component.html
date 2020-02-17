@@ -1,10 +1,10 @@
-<mat-toolbar color="primary">
-    <span>Site melhor que o SIGA</span>
-  
-    <!-- This fills the remaining space of the current row -->
-    <span class="example-fill-remaining-space"></span>
-  
-    <div>
-        <a mat-button [routerLink]="[ '/path' ]">Home</a>        
-    </div>
-  </mat-toolbar>
+<mat-toolbar class="menu">
+  <span id="title">Site melhor que o SIGA</span>
+  <span class="fill-space"></span>
+  <div>
+    <a mat-button [routerLink]="[ '/path' ]">Home</a>
+    <a mat-button [routerLink]="[ '/path' ]">Notícias</a>
+    <a mat-button [routerLink]="[ '/path' ]">Calendário</a>
+    <a mat-button [routerLink]="[ '/path' ]">Contato</a>
+  </div>
+</mat-toolbar>

@@ -8,22 +8,24 @@ import { RouterModule } from '@angular/router';
 import { PagesComponent } from './pages/pages.component';
 import { SharedModule } from './pages/shared/shared.module';
 import { MenuComponent } from './pages/menu/menu.component';
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PagesComponent,
     MenuComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     routing,
-    BrowserAnimationsModule,    
+    BrowserAnimationsModule,
     SharedModule,
   ],
   providers: [
-    
+
   ],
   bootstrap: [AppComponent]
 })
