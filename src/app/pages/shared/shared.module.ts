@@ -34,6 +34,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -111,6 +112,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
         MatStepperModule,        
         FormsModule,
         ReactiveFormsModule,
+        HttpClientModule
     ],
     declarations: [        
     ]
