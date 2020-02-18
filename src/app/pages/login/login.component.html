@@ -1,11 +1,12 @@
 <div class='mt-15 h-100' fxLayout="column" fxLayoutAlign="center center">    
-    <mat-card class="w-30 shadowed">
-        <mat-card-header class="mb-15 mt-15 ft-25" fxLayoutAlign="center center">
-            <mat-card-title>
-                <h1>Login</h1>
+    <mat-card class="w-30 shadowed" style="padding: 0;">
+        <mat-card-header class="mb-15 bg-img" fxLayoutAlign="center center">
+            <mat-card-title class="header">
+                <i>exit_to_app</i>
+               <h1> Login</h1>
             </mat-card-title>
         </mat-card-header>
-        <mat-card-content>
+        <mat-card-content class="pt-15">
             <form [formGroup]='loginForm' fxLayout="column" fxLayoutAlign="center center">
                 <mat-form-field>
                     <input matInput formControlName='usuario' placeholder="Usuário" type="text">

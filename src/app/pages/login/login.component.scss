@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Arvo&display=swap");
+
 .success {
-    background-color: lightblue;
+    background-color: #12394F;
+    color: white;
 }
 
 .ft-25{
@@ -15,13 +18,35 @@
 }
 
 .w-30 {
-    width: 30%;
+    width: 20%;
+}
+
+.pt-15 {
+    padding-top: 15px;
 }
 
 .mb-15 {
     margin-bottom: 15px !important;
 }
 
-.mt-15 {
-    margin-top: 15px !important;
+.header {
+    padding-top: 70px;
+    height: 130px;
+}
+
+.bg-img {
+    h1 {
+    font-size: 45px;
+    font-family: Arvo, serif;
+    padding-top: 8px;
+    }
+    i{
+        padding-left: 20px;
+        font-family: "Material Icons";
+        font-size: 80px;
+        font-style: normal;
+        text-decoration: none;
+    }
+    background-image: url("../../img/header.png");
+    color: white;
 }
