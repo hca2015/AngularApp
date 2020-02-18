@@ -15,17 +15,17 @@ import { SidebarComponent } from './pages/sidebar/sidebar.component';
     AppComponent,
     PagesComponent,
     MenuComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
     routing,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,    
     SharedModule,
   ],
   providers: [
-
+    
   ],
   bootstrap: [AppComponent]
 })
