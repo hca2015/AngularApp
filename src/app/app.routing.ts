@@ -6,7 +6,7 @@ import { AuthGuard } from './pages/core/auth.guard';
 
 export const routes: Routes = [
   {
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
     path: '',
     component: PagesComponent, children: [
       { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), data: { breadcrumb: 'Home' } },
