@@ -1,0 +1,65 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="h-100">
+  <mat-card class="card-style w-50">
+    <mat-card-header fxLayoutAlign="space-around center" class="bg">
+      <mat-card-title>
+        <h1>Cadastre-se</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+      <mat-horizontal-stepper #stepper linear>
+        <mat-step [stepControl]="formularioDadosConta" label="Dados da conta">
+          <form [formGroup]="formularioDadosConta" fxLayout="column" fxLayoutAlign="center center" class="w-100">
+            <div class='w-50'>
+              <mat-form-field>
+                <mat-label>E-mail</mat-label>
+                <input matInput placeholder="exemplo@email.com" formControlName="email" type="email">
+                <mat-error>{{getEmailError()}}</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input matInput placeholder="Insira uma senha" formControlName="senha" type="password">
+                <mat-error>{{getSenhaError()}}</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Confirmação de Senha</mat-label>
+                <input matInput placeholder="Digite a senha novamente" formControlName="confirmarsenha" type="password">
+                <mat-error>{{getConfirmarSenhaError()}}</mat-error>
+              </mat-form-field>
+              <div fxLayoutAlign="center center">
+                <button mat-button type="submit" matStepperNext>Próximo</button>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Dados pessoais">
+          <form [formGroup]="secondFormGroup" fxLayout="column" fxLayoutAlign="center center" class="w-50">
+            <mat-form-field>
+              <mat-label>Nome</mat-label>
+              <input matInput placeholder="Insira o nome completo" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Data de Nascimento</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="secondCtrl" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>CPF</mat-label>
+              <input matInput placeholder="Insira o seu CPF" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div fxLayout="row" fxLayoutAlign="space-around">
+              <button mat-button matStepperPrevious>Voltar</button>
+              <button mat-button type="submit" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step label="Confirmação">
+          <p>Enviaremos um e-mail confirmando se os dados estão corretos para seu acesso ao portal.</p>
+          <div>
+            <button mat-button (click)="stepper.reset()">Preencher Novamente</button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </mat-card-content>
+  </mat-card>
+</div>

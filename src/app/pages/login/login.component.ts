@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AbstractComponent } from 'src/app/utility.component';
 import { Router } from '@angular/router';
@@ -12,12 +12,8 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent extends AbstractComponent implements OnInit {
-
-  ngOnInit(): void {
+export class LoginComponent extends AbstractComponent implements AfterViewInit {
     
-  }
-  
   public loginForm: FormGroup;
 
   constructor(

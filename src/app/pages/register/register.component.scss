@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Arvo&display=swap");
+/*#title {
+    padding-bottom: 20px;
+    font-family: Arvo, serif;
+    font-weight: 300;
+    font-size: 30px;
+}*/
+.card-style {
+    padding: 0;
+    width: 550px;
+}
+
+.content {
+    padding: 0 50px 50px 50px;
+}
+button {
+ background-color: #12394F;
+ color: white;
+ margin-top: 20px;
+}
+
+:host ::ng-deep .mat-horizontal-content-container {
+    padding:0 !important;
+}
+
+.bg {
+    h1 {
+    font-size: 30px;
+    font-family: Arvo, serif;
+    padding: 15px 0;
+    margin-top: 15px;
+    }
+    i{
+        padding-left: 20px;
+        font-family: "Material Icons";
+        font-size: 80px;
+        font-style: normal;
+        text-decoration: none;
+    }
+    background-color: #12394F;
+    color: white;
+   
+ }

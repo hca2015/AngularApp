@@ -6,13 +6,14 @@ import { AuthGuard } from './pages/core/auth.guard';
 
 export const routes: Routes = [
     {
-        canActivate: [AuthGuard],
+        //canActivate: [AuthGuard],
         path: '',
         component: PagesComponent, children: [
             { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), data: { breadcrumb: 'Home' } },            
         ]
     },
-    { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },    
+    { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
+    { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },    
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, {

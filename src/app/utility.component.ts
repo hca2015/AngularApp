@@ -172,10 +172,10 @@ export function ComparisonValidator(confirmField: string): ValidatorFn {
     }
 }
 
-export abstract class AbstractComponent implements AfterViewInit{
+export abstract class AbstractComponent implements AfterViewInit {
 
     constructor() { }
-        
+
     ngAfterViewInit() {
         if (document.getElementsByTagName) {
             let inputElements = document.getElementsByTagName("input");
