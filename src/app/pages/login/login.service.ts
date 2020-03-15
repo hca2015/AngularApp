@@ -1,18 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { User } from 'src/app/models/user/user.model';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'src/app/app.component';
 
 @Injectable({
     providedIn: 'root',
-  })
-export class LoginService{
+})
+export class LoginService {
 
-    constructor(private http: HttpClient){
+    constructor(private http: HttpClient) {
 
     }
 
-    enviarLogin(user: User){
-        console.log('vai fazer a request')
-        return this.http.post('http://localhost:64984/api/Login', user);
+    enviarLogin(user: User) {
+        return this.http.post(API_URL + 'Login', user);
     }
 }

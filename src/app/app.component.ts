@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
+export const API_URL = 'http://localhost:64984/api/';
 
 @Component({
   selector: 'app-root',
@@ -8,20 +9,21 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {    
-    public loginForm: FormGroup;
 
-    constructor(
-      private formBuilder: FormBuilder
-      ){
-      this.loginForm = formBuilder.group({
-        usuario: '',
-        senha: ''
-      });
-    }
+export class AppComponent {
+  public loginForm: FormGroup;
 
-    enviarDados(){
-      console.log(this.loginForm.get('usuario').value);
-    
-    }
+  constructor(
+    private formBuilder: FormBuilder
+  ) {
+    this.loginForm = formBuilder.group({
+      usuario: '',
+      senha: ''
+    });
+  }
+
+  enviarDados() {
+    console.log(this.loginForm.get('usuario').value);
+
+  }
 }
